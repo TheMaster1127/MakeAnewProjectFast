@@ -5,7 +5,7 @@ git branch -m main
 
 git add .
 
-git commit -m "Added files"
+git commit -m "Create README.md"
 
 
 git push origin main
