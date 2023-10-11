@@ -129,6 +129,7 @@ ErrorCount := MoveFilesAndFolders("C:\Users\The_M\OneDrive\Desktop\GitHub Projec
 if (ErrorCount != 0)
     MsgBox %ErrorCount% files/folders could not be moved.
 
+
 MoveFilesAndFolders(SourcePattern, DestinationFolder, DoOverwrite = false)
 ; Moves all files and folders matching SourcePattern into the folder named DestinationFolder and
 ; returns the number of files/folders that could not be moved. This function requires [v1.0.38+]
