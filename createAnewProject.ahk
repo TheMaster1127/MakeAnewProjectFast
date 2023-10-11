@@ -30,6 +30,7 @@ dirPath := "C:\Users\The_M\OneDrive\Desktop\GitHub Projects\" . ProjectName
 if (FileExist(dirPath))
 {
 ;MsgBox, The directory exists!
+
 exists := 1
 }
 else
