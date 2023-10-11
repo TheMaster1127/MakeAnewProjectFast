@@ -109,11 +109,6 @@ git config --global user.email "%Email%"
 git remote add origin https://github.com/TheMaster1127/%ProjectName%.git
 
 git clone https://github.com/TheMaster1127/%ProjectName%.git
-
-
-hub api -X PATCH -H "Authorization: token $GITHUB_TOKEN" -F "%ReadMeText%" /repos/%UserName%/%ProjectName%
-
-
 )
 FileDelete, tempGitScript.bat
 FileAppend, %sendThisToCMD%, tempGitScript.bat
