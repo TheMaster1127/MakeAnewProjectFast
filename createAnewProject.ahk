@@ -12,7 +12,7 @@ Run *RunAs "%A_ScriptFullPath%" ; (A_AhkPath is usually optional if the script h
 StartTime := A_TickCount
 
 ; no spaces
-ProjectName := "MakeAnewProjectFast"
+ProjectName := "THE_AI_COMBINE_2.0_IN_AHK"
 ; line 1 Token
 ; line 2 UserName
 ; line 3 Email
