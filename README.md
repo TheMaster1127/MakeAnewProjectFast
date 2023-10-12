@@ -3,7 +3,7 @@
 This repository includes a file named `MyData.txt` with the following information:
 
 - **Token**: 
-  - Place your GitHub personal access token on this line.
+  - Place your GitHub personal access token on this line. [You can get your token here (https://github.com/settings/tokens?type=beta)]
 
 - **UserName**: 
   - Add your GitHub username on this line.
