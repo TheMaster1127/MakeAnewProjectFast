@@ -1,6 +1,6 @@
 Certainly! Below is the complete text for your README file:
 
-```markdown
+
 # GitHub Project Setup
 
 This repository includes a file named `MyData.txt` with the following information:
@@ -47,6 +47,5 @@ Before you proceed, make sure you have Git and Hub installed on your machine.
   - AutoHotKey is a Windows-only tool. Visit [AutoHotKey - Download](https://www.autohotkey.com/download/1.1/) to download and install AutoHotKey version 1.1.
 
 After installing Git, Hub, and AutoHotKey, you can proceed with setting up your GitHub project using the information provided in `MyData.txt`.
-```
 
 This README file provides detailed instructions for setting up your GitHub project, including an example of how the `MyData.txt` file should be formatted.
