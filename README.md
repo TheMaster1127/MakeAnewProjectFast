@@ -1,6 +1,3 @@
-Certainly! Below is the complete text for your README file:
-
-
 # GitHub Project Setup
 
 This repository includes a file named `MyData.txt` with the following information:
