@@ -17,7 +17,6 @@ ProjectName := "THE_AI_COMBINE_2.0_IN_AHK"
 ; line 2 UserName
 ; line 3 Email
 
-
 FileReadLine, token, MyData.txt, 1
 FileReadLine, UserName, MyData.txt, 2
 FileReadLine, Email, MyData.txt, 3
@@ -109,6 +108,11 @@ git config --global user.email "%Email%"
 git remote add origin https://github.com/TheMaster1127/%ProjectName%.git
 
 git clone https://github.com/TheMaster1127/%ProjectName%.git
+
+
+hub api -X PATCH -H "Authorization: token $GITHUB_TOKEN" -F "%ReadMeText%" /repos/%UserName%/%ProjectName%
+
+
 )
 FileDelete, tempGitScript.bat
 FileAppend, %sendThisToCMD%, tempGitScript.bat
