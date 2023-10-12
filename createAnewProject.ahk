@@ -16,14 +16,17 @@ ProjectName := "THE_AI_COMBINE_2.0_IN_AHK"
 ; line 1 Token
 ; line 2 UserName
 ; line 3 Email
+; line 4 Project folder for example C:\Users\The_M\OneDrive\Desktop\GitHub Projects
+; make sure there is no \ at the end of the path!!!
 
 FileReadLine, token, MyData.txt, 1
 FileReadLine, UserName, MyData.txt, 2
 FileReadLine, Email, MyData.txt, 3
+FileReadLine, FolderName, MyData.txt, 4
 
 
 ; Specify the directory path
-dirPath := "C:\Users\The_M\OneDrive\Desktop\GitHub Projects\" . ProjectName
+dirPath := FolderName . "\" . ProjectName
 
 ; Check if the directory exists
 if (FileExist(dirPath))
@@ -36,7 +39,7 @@ else
 {
 ;MsgBox, The directory does not exist.
 exists := 0
-FileCreateDir, C:\Users\The_M\OneDrive\Desktop\GitHub Projects\%ProjectName%
+FileCreateDir, %FolderName%\%ProjectName%
 }
 
 Sleep, 300
@@ -84,7 +87,7 @@ SOFTWARE.
 Sleep, 300
 sendThisToCMD =
 (
-cd C:\Users\The_M\OneDrive\Desktop\GitHub Projects\%ProjectName%
+cd %FolderName%\%ProjectName%
 git init
 
 git branch -m main
@@ -110,9 +113,6 @@ git remote add origin https://github.com/TheMaster1127/%ProjectName%.git
 git clone https://github.com/TheMaster1127/%ProjectName%.git
 
 
-hub api -X PATCH -H "Authorization: token $GITHUB_TOKEN" -F "%ReadMeText%" /repos/%UserName%/%ProjectName%
-
-
 )
 FileDelete, tempGitScript.bat
 FileAppend, %sendThisToCMD%, tempGitScript.bat
@@ -124,7 +124,7 @@ if (exists = 1)
 {
 
 
-ErrorCount := MoveFilesAndFolders("C:\Users\The_M\OneDrive\Desktop\GitHub Projects\" . ProjectName . "\*.*", "C:\Users\The_M\OneDrive\Desktop\GitHub Projects\" . ProjectName . "\" . ProjectName)
+ErrorCount := MoveFilesAndFolders(FolderName . "\" . ProjectName . "\*.*", FolderName . "\" . ProjectName . "\" . ProjectName)
 if (ErrorCount != 0)
     MsgBox %ErrorCount% files/folders could not be moved.
 
@@ -154,7 +154,7 @@ MoveFilesAndFolders(SourcePattern, DestinationFolder, DoOverwrite = false)
 
 sendThisToCMD =
 (
-cd C:\Users\The_M\OneDrive\Desktop\GitHub Projects\%ProjectName%\%ProjectName%
+cd %FolderName%\%ProjectName%\%ProjectName%
 git init
 
 git branch -m main
@@ -178,14 +178,14 @@ Sleep, 300
 
 
 
-FileAppend, %ReadMeText%, C:\Users\The_M\OneDrive\Desktop\GitHub Projects\%ProjectName%\%ProjectName%\README.md
+FileAppend, %ReadMeText%, %FolderName%\%ProjectName%\%ProjectName%\README.md
 Sleep, 100
 
 
 Sleep, 300
 sendThisToCMD =
 (
-cd C:\Users\The_M\OneDrive\Desktop\GitHub Projects\%ProjectName%\%ProjectName%
+cd %FolderName%\%ProjectName%\%ProjectName%
 git init
 
 git branch -m main
@@ -208,14 +208,14 @@ Sleep, 300
 
 
 
-FileAppend, %LICENCE%, C:\Users\The_M\OneDrive\Desktop\GitHub Projects\%ProjectName%\%ProjectName%\LICENCE
+FileAppend, %LICENCE%, %FolderName%\%ProjectName%\%ProjectName%\LICENCE
 Sleep, 100
 
 
 Sleep, 300
 sendThisToCMD =
 (
-cd C:\Users\The_M\OneDrive\Desktop\GitHub Projects\%ProjectName%\%ProjectName%
+cd %FolderName%\%ProjectName%\%ProjectName%
 
 git add .
 
