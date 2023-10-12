@@ -41,7 +41,7 @@ Before you proceed, make sure you have Git and Hub installed on your machine.
 ## AutoHotKey (AHK) Installation
 
 - **AutoHotKey Version 1.1:**
-  - AutoHotKey is a Windows-only tool. Visit [AutoHotKey - Download](https://www.autohotkey.com/download/1.1/) to download and install AutoHotKey version 1.1.
+  - AutoHotKey is a Windows-only tool. Visit [AutoHotKey - Download](https://www.autohotkey.com/download/ahk-install.exe) to download and install AutoHotKey version 1.1.
 
 After installing Git, Hub, and AutoHotKey, you can proceed with setting up your GitHub project using the information provided in `MyData.txt`.
 
