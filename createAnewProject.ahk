@@ -59,7 +59,6 @@ Return
 Gui, Destroy
 StartTime := A_TickCount
 
-
 ; line 1 Token
 ; line 2 UserName
 ; line 3 Email
