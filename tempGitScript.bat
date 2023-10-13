@@ -1,4 +1,4 @@
-cd C:\Users\The_M\OneDrive\Desktop\GitHub Projects\Testing1234567\Testing1234567
+cd C:\Users\The_M\OneDrive\Desktop\GitHub Projects\TheTest1234\TheTest1234
 
 git add .
 

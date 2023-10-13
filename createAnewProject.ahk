@@ -48,6 +48,7 @@ else {
     ; MsgBox, Project name is valid according to GitHub repository naming rules.
 }
 
+
 MsgBox, 262436, , Are you sure you wnat to name your project %ProjectName%
 IfMsgBox No
 {
