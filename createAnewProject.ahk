@@ -3,16 +3,63 @@
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;;;;;;;;;;;;;;;;;;;;;
 
-Sleep, 100
 
 if not A_IsAdmin
 {
 Run *RunAs "%A_ScriptFullPath%" ; (A_AhkPath is usually optional if the script has the .ahk extension.) You would typically check  first.
 }
+
+
+Gui, Color, 121212
+Gui -DPIScale
+Gui, Font, s15
+Gui, Add, Text, cWhite x0 y10 w450 h30 center, Make a new project
+Gui, Add, Text, cWhite x0 y100 w450 h30 center, Enter the name of your new project
+Gui, Add, Edit, x10 y150 h50 w430 vProjectName
+Gui, Add, Button, x150 y220 h60 w150 gButton, Create
+Gui, Show, w450 h300
+Return
+Button:
+Gui, Submit, NoHide
+
+; Function to check if the string contains spaces
+HasSpaces(str) {
+    return RegExMatch(str, "\s")
+}
+
+; Function to check if the string conforms to GitHub repository naming rules
+IsValidGitHubRepoName(str) {
+    return !HasSpaces(str) && RegExMatch(str, "^[a-zA-Z0-9_\-\.]+$")
+}
+
+if (HasSpaces(ProjectName)) {
+    MsgBox, Your project name contains spaces, which is not allowed according to GitHub naming rules.
+    GuiControl, , ProjectName,
+    GuiControl, Focus, ProjectName,
+    Return
+}
+else if (!IsValidGitHubRepoName(ProjectName)) {
+    MsgBox, Your project name contains invalid characters. GitHub repository names can only contain letters, numbers, hyphens, underscores, and dots.
+    GuiControl, , ProjectName,
+    GuiControl, Focus, ProjectName,
+    Return
+}
+else {
+    ; MsgBox, Project name is valid according to GitHub repository naming rules.
+}
+
+MsgBox, 262436, , Are you sure you wnat to name your project %ProjectName%
+IfMsgBox No
+{
+GuiControl, , ProjectName,
+GuiControl, Focus, ProjectName,
+Return
+}
+
+Gui, Destroy
 StartTime := A_TickCount
 
-; no spaces
-ProjectName := "THE_AI_COMBINE_2.0_IN_AHK"
+
 ; line 1 Token
 ; line 2 UserName
 ; line 3 Email
@@ -254,3 +301,8 @@ ElapsedTime123 .= hours "h " minutes "m " seconds "s " milliseconds "ms"
 
 MsgBox, 262144, , Done in %ElapsedTime123%
 ExitApp
+Return
+
+GuiClose:
+ExitApp
+Return
