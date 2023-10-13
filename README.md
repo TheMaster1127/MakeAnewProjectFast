@@ -3,7 +3,9 @@
 This repository includes a file named `MyData.txt` with the following information:
 
 - **Token**: 
-  - Place your GitHub personal access token on this line. You can get your token here https://github.com/settings/tokens?type=beta
+  - Place your GitHub personal access token on this line. You can get your token here https://github.com/settings/tokens?type=beta and also give this access:
+![image](https://github.com/TheMaster1127/MakeAnewProjectFast/assets/134737935/658b7c7e-5d08-4bc3-a87c-3b51745d2507)
+
 
 - **UserName**: 
   - Add your GitHub username on this line.
