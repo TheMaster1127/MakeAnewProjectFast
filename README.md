@@ -1,3 +1,5 @@
+This script allows you to create repositories on GitHub quickly and efficiently.
+
 # GitHub Project Setup
 
 This repository includes a file named `MyData.txt` with the following information:
