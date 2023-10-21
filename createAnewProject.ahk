@@ -173,8 +173,9 @@ if (exists = 1)
 
 ErrorCount := MoveFilesAndFolders(FolderName . "\" . ProjectName . "\*.*", FolderName . "\" . ProjectName . "\" . ProjectName)
 if (ErrorCount != 0)
-    MsgBox %ErrorCount% files/folders could not be moved.
-
+{
+;MsgBox %ErrorCount% files/folders could not be moved.
+}
 
 MoveFilesAndFolders(SourcePattern, DestinationFolder, DoOverwrite = false)
 ; Moves all files and folders matching SourcePattern into the folder named DestinationFolder and
@@ -192,7 +193,9 @@ MoveFilesAndFolders(SourcePattern, DestinationFolder, DoOverwrite = false)
         FileMoveDir, %A_LoopFileFullPath%, %DestinationFolder%\%A_LoopFileName%, %DoOverwrite%
         ErrorCount += ErrorLevel
         if ErrorLevel  ; Report each problem folder by name.
-            MsgBox Could not move %A_LoopFileFullPath% into %DestinationFolder%.
+{
+;MsgBox Could not move %A_LoopFileFullPath% into %DestinationFolder%.
+}
     }
     return ErrorCount
 }
