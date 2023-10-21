@@ -1,4 +1,4 @@
-This script allows you to create repositories on GitHub quickly and efficiently.
+This script allows you to create repositories on GitHub quickly and efficiently. Using Git and Hub
 
 # GitHub Project Setup
 
