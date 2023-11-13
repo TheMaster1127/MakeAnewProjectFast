@@ -51,7 +51,7 @@ After installing Git, Hub, and AutoHotKey, you can proceed with setting up your 
 
 This README file provides detailed instructions for setting up your GitHub project, including an example of how the `MyData.txt` file should be formatted.
 
-### How It Works
+## How It Works
 
 When you run the script, you can name the new project and press the button.
 You can also name an existing folder in the directory of GitHub projects on your computer, and that folder will be uploaded as a project. Additionally, it will add the README file and the license"
