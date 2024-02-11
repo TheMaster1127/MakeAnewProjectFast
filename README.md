@@ -2,7 +2,7 @@ This script allows you to create repositories on GitHub quickly and efficiently.
 
 # GitHub Project Setup
 
-This repository includes a file named `MyData.txt` with the following information:
+This repository needs a file named `MyData.txt` with the following information:
 
 - **Token**: 
   - Place your GitHub personal access token on this line. You can get your token here https://github.com/settings/tokens?type=beta and also give this access:
@@ -54,5 +54,5 @@ This README file provides detailed instructions for setting up your GitHub proje
 ## How It Works
 
 When you run the script, you can name the new project and press the button.
-You can also name an existing folder in the directory of GitHub projects on your computer, and that folder will be uploaded as a project. Additionally, it will add the README file and the license"
+You can also name an existing folder in the directory of GitHub projects on your computer, and that folder will be uploaded as a project. Additionally, it will add the README file and the license
 
